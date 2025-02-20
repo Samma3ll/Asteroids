@@ -5,6 +5,7 @@ from constants import PLAYER_RADIUS
 
 class Player(CircleShape, x, y):
     def __init__(self, x, y, PLAYER_RADIUS):
+        super().__init__()
         self.x = x
         self.y = y
         self.radius = PLAYER_RADIUS
