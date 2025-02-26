@@ -39,6 +39,10 @@ def main():
         screen.fill((0, 0, 0))
         updatable.update(dt)
         for i in asteroids:
+            for j in shots:
+                if i.colliding(j):
+                    i.split()
+                    j.kill()
             if i.colliding(player):
                 sys.exit("Game over!")
         for i in drawable:
